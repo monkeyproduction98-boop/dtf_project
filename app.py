@@ -1,18 +1,29 @@
 import streamlit as st
-from calculator_page import run_calculator_page
-from report_page import run_report_page
 
-st.set_page_config(page_title="DTF Multi-Tool", layout="wide")
+st.set_page_config(page_title="Main Menu", layout="wide")
 
-st.title("Welcome to DTF Multi-Tool")
+st.title("Choose an Option")
 
-option = st.radio(
-    "Choose a tool:",
-    ["🧮 Cost Calculator", "📊 Reports"]
-)
+col1, col2 = st.columns(2)
 
-if option == "🧮 Cost Calculator":
-    run_dtf_dashboard()
-elif option == "📊 Reports":
-    run_report_page()
+with col1:
+    st.markdown(
+        """
+        <a href="/dtf_dashboard" target="_self">
+            <img src="https://img.freepik.com/free-vector/calculator-floating-cartoon-vector-icon-illustration-finance-business-icon-concept-isolated-flat_138676-9297.jpg" 
+            style="width:100%; border-radius:15px;">
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
 
+with col2:
+    st.markdown(
+        """
+        <a href="/reports" target="_self">
+            <img src="https://holistiquetraining.com/storage/write-a-report.jpg" 
+            style="width:100%; border-radius:15px;">
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
