@@ -12,6 +12,7 @@ option = st.radio(
 )
 
 if option == "🧮 Cost Calculator":
-    run_calculator_page()
+    run_dtf_dashboard()
 elif option == "📊 Reports":
     run_report_page()
+
